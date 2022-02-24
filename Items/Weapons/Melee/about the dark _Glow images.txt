@@ -1,0 +1,1 @@
+It turns out the glow code is still affected by lighting a bit, so I cut the _Glow images' color levels to half to counter it. The coloring of the claws ended up looking better in the light than it would have if I didn't do that, and they're still quite visible in the dark... aside from the glowing dust.

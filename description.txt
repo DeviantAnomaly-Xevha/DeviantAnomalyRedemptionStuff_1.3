@@ -1,0 +1,33 @@
+Greetings. As you might be able to tell from the mod's icon, I'm a bit of a Xenomite enthusiast.
+
+This mod includes two personally-sprited items:
+
+1) my personal vanity set, the result of creating a Redemption-inspired form for myself in City of Heroes ("Organic Armor" + "Fire and Ice" costume parts, if curious), and then being determined to have that form in Terraria.
+
+2) a "Xenomite Claw, a pre-hardmode weapon which can be acquired as soon as you get enough Xenomite Shards, and which can be upgraded several times to keep up with the higher-tier weaponry you may find. It infects enemies when you strike, just like the Old Xenomite Blade and Swarmer Cannon. Be careful though, because like many Xenomite items, it can also infect you.
+
+There is the option to use Corrupted Xenomite on it later, which replaces the infection with a different effect.
+
+
+
+Although these items were made to be used alongside Redemption, you can choose to use them on their own with no trouble. If Redemption isn't enabled, the Xenomite infection debuffs will be replaced with Poison.
+
+------------------------------
+
+Thanks to:
+>Dan Yami, whose "Quill Quote" vanity set mod taught me how to make my own.
+>Hallam, Whitey, and various people from the Redemption and tModLoader Discords, for code and critique. I am NOT a coder. I'm just fortunate to have received the help that I did, and lucky that nothing blew up.
+
+If you're interested in making something of your own, but you don't know jack about C# coding (I don't either actually), don't let that stop you. All you have to do is take the first step, and trust me, people will be willing to help. Just don't expect them to create your mod for you.
+
+------------------------------
+
+I highly recommend trying out "Mod of Redemption". The "Abandoned Lab" is amazing, but be careful of Xenomite infections, or being overwhelmed by radiation.
+
+Also, be sure to try Dan Yami's mod, "Shadows of Abaddon". It has excellent bosses and awesome music.
+
+------------------------------
+
+Since I pretty much live in the Redemption Discord right now, I've put that as the "homepage" link here.
+
+Although I made this mainly for myself, I hope you enjoy it.

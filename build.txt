@@ -1,0 +1,7 @@
+displayName = DeviantAnomaly's Redemption stuff
+author = DeviantAnomaly
+version = 0.1
+weakReferences = Redemption@0.8.0.3
+includePDB = true
+sortAfter = Redemption
+homepage = https://discord.gg/J25aSxCadz
