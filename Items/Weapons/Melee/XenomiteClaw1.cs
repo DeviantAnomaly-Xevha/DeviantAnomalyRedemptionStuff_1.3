@@ -9,7 +9,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 {
 	public class XenomiteClaw1 : ModItem
 	{
-		public static short customGlowMask = 0;
+        public static short customGlowMask = 0;
 
 		public override void SetStaticDefaults() 
 		{
@@ -38,16 +38,16 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		public override void SetDefaults() 
 		{
 			item.glowMask = customGlowMask;
-			item.damage = 15;
+			item.damage = 24;
 			item.melee = true;
 			item.width = 24;
-			item.height = 12;
+			item.height = 18;
 			item.useTime = 8;
 			item.useAnimation = 8;
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.value = 10000;
-			item.rare = 7;
+			item.rare = 3;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.useTurn = false;
@@ -104,5 +104,5 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 			else {
 			}
 		}
-	}
+    }
 }

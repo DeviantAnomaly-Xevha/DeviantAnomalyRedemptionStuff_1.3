@@ -23,7 +23,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Armor.Vanity
             item.width = 16;
             item.height = 16;
             item.value = Item.sellPrice(0, 0, 0, 0);
-            item.rare = 5;
+            item.rare = 2;
             item.vanity = true;
         }
 
@@ -36,6 +36,18 @@ namespace DeviantAnomalyRedemptionStuff.Items.Armor.Vanity
 		{
 			DisplayName.SetDefault("DeviantAnomaly's Legs");
 			Tooltip.SetDefault("What's up with your feet?");
+		}
+		public override void AddRecipes() 
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			Mod RedeMod = ModLoader.GetMod("Redemption");
+			if (RedeMod != null) {
+			recipe.AddIngredient(RedeMod.ItemType("XenomiteShard"), 5);
+			recipe.AddTile(26);//Demon Altar or Crimson Altar
+			recipe.SetResult(this);
+			recipe.AddRecipe();}
+			else {
+			}
 		}
     }
 }

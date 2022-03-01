@@ -20,10 +20,10 @@ namespace DeviantAnomalyRedemptionStuff.Items.Armor.Vanity
     {
         public override void SetDefaults()
         {
-            item.width = 16;
-            item.height = 16;
+            item.width = 22;
+            item.height = 24;
             item.value = Item.sellPrice(0, 0, 0, 0);
-            item.rare = 5;
+            item.rare = 2;
             item.vanity = true;
         }
 		public override void SetStaticDefaults()
@@ -34,6 +34,18 @@ namespace DeviantAnomalyRedemptionStuff.Items.Armor.Vanity
 		public override bool DrawHead()
 		{
 			return false;
+		}
+		public override void AddRecipes() 
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			Mod RedeMod = ModLoader.GetMod("Redemption");
+			if (RedeMod != null) {
+			recipe.AddIngredient(RedeMod.ItemType("XenomiteShard"), 5);
+			recipe.AddTile(26);//Demon Altar or Crimson Altar
+			recipe.SetResult(this);
+			recipe.AddRecipe();}
+			else {
+			}
 		}
     }
 }

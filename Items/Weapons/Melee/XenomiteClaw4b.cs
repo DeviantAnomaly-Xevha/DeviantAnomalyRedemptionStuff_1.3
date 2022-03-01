@@ -38,16 +38,16 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		public override void SetDefaults() 
 		{
 			item.glowMask = customGlowMask;
-			item.damage = 120;
+			item.damage = 160;
 			item.melee = true;
 			item.width = 36;
-			item.height = 18;
+			item.height = 27;
 			item.useTime = 8;
 			item.useAnimation = 8;
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.value = 80000;
-			item.rare = 10;
+			item.rare = 6;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.useTurn = false;

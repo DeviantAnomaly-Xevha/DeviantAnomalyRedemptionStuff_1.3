@@ -16,7 +16,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 			DisplayName.SetDefault("Xenium Claw");
 			Mod RedeMod = ModLoader.GetMod("Redemption");
 			if(RedeMod != null)
-			Tooltip.SetDefault("[i:" + RedeMod.ItemType("XeniumBar") + "]Large and deadly!");
+			Tooltip.SetDefault("[i:" + RedeMod.ItemType("XeniumBar") + "]Large and deadly!\nLess direct damage than other claws, but\nreleases powerful short-range Xeno-Shockwaves.");
 			else {
 			Tooltip.SetDefault("Large and deadly!");
 			}
@@ -37,21 +37,30 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 		public override void SetDefaults() 
 		{
+			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			item.glowMask = customGlowMask;
-			item.damage = 240;
+			item.damage = 160;
 			item.melee = true;
 			item.width = 40;
-			item.height = 20;
+			item.height = 30;
 			item.useTime = 8;
 			item.useAnimation = 8;
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.value = 160000;
-			item.rare = 11;
-			item.UseSound = SoundID.Item1;
+			item.rare = 10;
+			item.UseSound = SoundID.Item15;
 			item.autoReuse = true;
 			item.useTurn = false;
 			item.crit = 21;
+			item.shoot = DARSMod.ProjectileType ("XenoShockwave_Proj");
+			item.shootSpeed = 16f;
+		}
+
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage * 2, knockBack, ((Entity)player).whoAmI, 0f, 0f);
+			return false;
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)

@@ -38,16 +38,16 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		public override void SetDefaults() 
 		{
 			item.glowMask = customGlowMask;
-			item.damage = 240;
+			item.damage = 320;
 			item.melee = true;
 			item.width = 40;
-			item.height = 20;
+			item.height = 30;
 			item.useTime = 8;
 			item.useAnimation = 8;
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.value = 160000;
-			item.rare = 11;
+			item.rare = 10;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.useTurn = false;
@@ -66,7 +66,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 			if (RedeMod != null) {
 			if (Main.rand.Next(5) == 0)
 			{
-				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<XenoDust>(), 0f, 0f, 0, default(Color), 1f);
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<VlitchFlame>(), 0f, 0f, 0, default(Color), 1f);
 				}
 			}
 		}

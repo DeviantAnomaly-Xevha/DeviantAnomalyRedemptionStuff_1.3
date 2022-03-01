@@ -13,24 +13,27 @@ using Terraria.Utilities;
 using Terraria.ModLoader;
 using Terraria.Localization;
 
-
 namespace DeviantAnomalyRedemptionStuff.Items.Armor.Vanity
 {
-	[AutoloadEquip(EquipType.Body)]
-    public class DeviantAnomalyBody : ModItem
+	[AutoloadEquip(EquipType.Head)]
+    public class DeviantAnomalyHeadHairstyle22 : ModItem
     {
         public override void SetDefaults()
         {
-            item.width = 16;
-            item.height = 16;
+            item.width = 26;
+            item.height = 22;
             item.value = Item.sellPrice(0, 0, 0, 0);
             item.rare = 2;
             item.vanity = true;
         }
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("DeviantAnomaly's Body");
-			Tooltip.SetDefault("You are one with the crystals.");
+			DisplayName.SetDefault("DeviantAnomaly's Head - hairstyle 22");
+			Tooltip.SetDefault("Crystals are growing from your head!\n...\nIt's probably fine.");
+		}
+		public override bool DrawHead()
+		{
+			return false;
 		}
 		public override void AddRecipes() 
 		{
