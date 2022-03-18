@@ -95,9 +95,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			Mod RedeMod = ModLoader.GetMod("Redemption");
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw1"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw1"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddTile(134);//Mythril or Orichalcum Anvil

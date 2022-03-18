@@ -55,9 +55,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		}
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit) {
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (Main.rand.NextBool(1))
-			player.AddBuff(DARSMod.BuffType("XenomiteClaw6CBuff"), 120);
+			player.AddBuff(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").BuffType("XenomiteClaw6CBuff"), 120);
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
@@ -80,9 +79,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			Mod RedeMod = ModLoader.GetMod("Redemption");
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5"));
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedXenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedStarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);
@@ -92,7 +90,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5b"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5b"));
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedXenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedStarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);
@@ -102,7 +100,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5C"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5C"));
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedXenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedStarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);
@@ -112,7 +110,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5Cb"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5Cb"));
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedXenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("CorruptedStarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);

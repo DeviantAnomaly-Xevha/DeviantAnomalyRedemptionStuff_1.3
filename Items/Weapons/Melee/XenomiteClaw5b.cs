@@ -95,9 +95,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			Mod RedeMod = ModLoader.GetMod("Redemption");
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw4"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw4"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(3467, 5);//Luminite Bars
@@ -107,7 +106,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw4b"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw4b"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(3467, 5);//Luminite Bars

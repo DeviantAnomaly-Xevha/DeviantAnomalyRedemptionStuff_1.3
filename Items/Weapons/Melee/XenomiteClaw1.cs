@@ -97,8 +97,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 			Mod RedeMod = ModLoader.GetMod("Redemption");
 			if (RedeMod != null) {
 			recipe.AddIngredient(RedeMod.ItemType("XenomiteShard"), 5);
-			recipe.AddIngredient(117, 5);//Meteorite Bars
-			recipe.AddTile(16);//Iron or Lead Anvil
+			recipe.AddIngredient(ItemID.MeteoriteBar, 5);//Meteorite Bars
+			recipe.AddTile(TileID.Anvils);//Iron or Lead Anvil
 			recipe.SetResult(this);
 			recipe.AddRecipe();}
 			else {

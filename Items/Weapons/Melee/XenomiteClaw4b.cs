@@ -95,9 +95,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			Mod RedeMod = ModLoader.GetMod("Redemption");
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw3"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw3"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("Bioweapon"), 5);
@@ -108,7 +107,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw3"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw3"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("Bile"), 5);
@@ -119,7 +118,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw3b"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw3b"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("Bioweapon"), 5);
@@ -130,7 +129,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw3b"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw3b"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(RedeMod.ItemType("Bile"), 5);

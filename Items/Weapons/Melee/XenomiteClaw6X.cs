@@ -37,7 +37,6 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 		public override void SetDefaults() 
 		{
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			item.glowMask = customGlowMask;
 			item.damage = 320;
 			item.melee = true;
@@ -53,7 +52,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 			item.autoReuse = true;
 			item.useTurn = false;
 			item.crit = 26;
-			item.shoot = DARSMod.ProjectileType ("XenoShockwave_Proj");
+			item.shoot = ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType ("XenoShockwave_Proj");
 			item.shootSpeed = 16f;
 		}
 
@@ -83,9 +82,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			Mod RedeMod = ModLoader.GetMod("Redemption");
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5"));
 			recipe.AddIngredient(RedeMod.ItemType("XeniumBar"), 15);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);
 			recipe.AddTile(RedeMod.TileType("XenoTank1"));//Xenium Refinery
@@ -94,7 +92,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5b"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5b"));
 			recipe.AddIngredient(RedeMod.ItemType("XeniumBar"), 15);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);
 			recipe.AddTile(RedeMod.TileType("XenoTank1"));//Xenium Refinery
@@ -103,7 +101,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 
 			recipe = new ModRecipe(mod);
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw5X"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw5X"));
 			recipe.AddIngredient(RedeMod.ItemType("XeniumBar"), 15);
 			recipe.AddIngredient(RedeMod.ItemType("BluePrints"), 1);
 			recipe.AddTile(RedeMod.TileType("XenoTank1"));//Xenium Refinery

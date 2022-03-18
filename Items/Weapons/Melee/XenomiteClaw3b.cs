@@ -47,7 +47,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 			item.useStyle = 1;
 			item.knockBack = 4;
 			item.value = 40000;
-			item.rare = 6;
+			item.rare = 5;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.useTurn = false;
@@ -95,9 +95,8 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			Mod RedeMod = ModLoader.GetMod("Redemption");
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
 			if (RedeMod != null) {
-			recipe.AddIngredient(DARSMod.ItemType("XenomiteClaw2"));
+			recipe.AddIngredient(ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteClaw2"));
 			recipe.AddIngredient(RedeMod.ItemType("Xenomite"), 10);
 			recipe.AddIngredient(RedeMod.ItemType("StarliteBar"), 5);
 			recipe.AddIngredient(ItemID.SoulofFright, 5);
