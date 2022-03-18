@@ -50,6 +50,13 @@ Although I made these things mainly for myself, I hope you enjoy them.
 
 [latest stuff]
 
+Whoops! Forgot to adjust the new weapon's mana costs.
+Everything was set to 5 from tier 1 to 6.
+Now the mana requirement starts at 5, going up +2 each upgrade.
+
+
+[recent latest stuff]
+
 Added the "Xenomite Crystal Bomb", a new toy based on a certain special weapon from Mega Man X: Corrupted.
 
 Added the "Victory Fist", a useless but fun item, also inspired by watching all those videos.
