@@ -1,12 +1,21 @@
 Greetings. As you might be able to tell from the mod's icon, I'm a bit of a Xenomite enthusiast.
 
-This mod includes two personally-sprited items:
+This mod includes four personally-sprited items:
 
-1) my personal vanity set, the result of creating a Redemption-inspired form for myself in City of Heroes ("Organic Armor" + "Fire and Ice" costume parts, if curious), and then being determined to have that form in Terraria.
+1) my personal vanity set, the result of creating a Redemption-inspired form for myself in City of Heroes ("Organic Armor" + "Fire and Ice" costume parts, if curious), and then being determined to have that form in Terraria (now includes a hairstyle-22 head).
 
 2) a "Xenomite Claw, a pre-hardmode weapon which can be acquired as soon as you get enough Xenomite Shards, and which can be upgraded several times to keep up with the higher-tier weaponry you may find. It infects enemies when you strike, just like the Old Xenomite Blade and Swarmer Cannon. Be careful though, because like many Xenomite items, it can also infect you.
 
+3) the "Xenomite Crystal Bomb", a second pre-hardmode weapon which fans of Mega Man X: Corrupted might be familiar with. It shares the claw's infectious effect, and can also be upgraded. Its projectiles have a small area of effect, and they grow crystal pillars when they land on the ground, which can help against enemy projectiles.
+
+4) a little for-fun item called the "Victory Fist", craftable for free at a workbench.
+It doesn't really do anything useful, but it has lights and sound!
+Try it with the main parts of the vanity set equipped.
+
 You can opt to upgrade a claw with Corrupted Xenomite or Xenium later on, too, which removes the infection debuff and replaces it with a different effect, but you have to pick one or the other, because you can't use Xenium on a Corrupted Xenomite Claw, or vice versa.
+
+The Xenomite Crystal Bomb has no split upgrade paths, but it has two appearance styles (more noticeable if you're not using the vanity set), leaves projectile-reflecting crystal pillars on the ground which deal half the weapon's damage, and can be charged to deal more damage (complete with a fancy charging dust pattern).
+
 
 
 
@@ -17,9 +26,11 @@ Although these items were made to be used alongside Redemption, you can choose t
 Thanks to:
 >Dan Yami, whose "Quill Quote" vanity set mod taught me how to make my own.
 >Hallam, for glowmask help on the claws
+>Nakano, creator of TerraGuardians, for coding tips and assistance, and a surprising amount of patience with how things took a while to sink in at times
 >Whitey and others from the Redemption Discord for critique and ideas
 
-BIG thanks to the tModLoader Discord, for the majority of coding assistance. I am NOT a big coder like other people. I'm just fortunate to have received the help that I did.
+BIG thanks to the tModLoader Discord, especially to Gabe and Glasses-san, for the majority of coding assistance. I am NOT a big coder like other people. I'm just fortunate to have received the help that I did.
+
 
 If you're interested in making something of your own, but you don't know jack about C# coding (I don't either actually), don't let that stop you. It all starts with taking that first step, and trust me, people will be willing to help. Just don't expect them to create your mod for you.
 
@@ -33,11 +44,20 @@ Also, be sure to try Dan Yami's mod, "Shadows of Abaddon". It has excellent boss
 
 Since I pretty much live in the Redemption Discord right now, I've put that as the "homepage" link here.
 
-Although I made this mainly for myself, I hope you enjoy it.
+Although I made these things mainly for myself, I hope you enjoy them.
 
 ------------------------------
 
 [latest stuff]
+
+Added the "Xenomite Crystal Bomb", a new toy based on a certain special weapon from Mega Man X: Corrupted.
+
+Added the "Victory Fist", a useless but fun item, also inspired by watching all those videos.
+
+Readjusted some item rarity values after seeing a couple of claws weren't at what I meant them to be.
+
+
+[previously]
 
 DNI Equipment Upgrade-related adjustment. I forgot to adjust item rarity for the convenience of anyone using that mod (which is awesome and you should try it at least once, especially if you have a favorite weapon or armor that got outclassed).
 
@@ -45,7 +65,7 @@ The first Xenomite Claw now has a rarity of 2, green, meaning you can refine it 
 Heck no.
 
 
-[previously]
+[even more previously]
 
 I thought about Redemption's Xenium weapons, then about Mega Man X3. Xenium Claws now shoot a short-range projectile, with a fancy spark when it hits a target.
 
