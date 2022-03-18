@@ -34,7 +34,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Magic
             item.useAnimation = 30;
             item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true;
-            item.knockBack = 4;
+            item.knockBack = 6;
             item.value = 10000;
             item.rare = ItemRarityID.Orange;
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_shoot");
@@ -46,25 +46,25 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Magic
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            if (Charge >= 30f && Charge < 90f && player.statMana >= 5)//for shots below charge level 1
+            if (Charge >= 30f && Charge < 90f && player.statMana >= item.mana)//for shots below charge level 1
             {
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_shoot"), player.position);
                 type = ModContent.ProjectileType<X1XenomiteCrystalBomb_Proj>();//basic projectile
-                player.statMana -= 5;//making sure mana's still spent when the use button's released before reaching a level 1 charge
+                player.statMana -= item.mana;//making sure mana's still spent when the use button's released before reaching a level 1 charge
                 damage = damage;
             }
-            else if (Charge >= 90f && Charge < 180f && player.statMana >= 10)//charge level 1
+            else if (Charge >= 90f && Charge < 180f && player.statMana >= item.mana * 2)//charge level 1
             {
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_shoot"), player.position);
                 type = ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>();//level 1 charge projectile
-                player.statMana -= 10;
+                player.statMana -= item.mana * 2;
                 damage *= 2;
             }
-            else if (Charge >= 180f && player.statMana >= 15)//charge level 2
+            else if (Charge >= 180f && player.statMana >= item.mana * 3)//charge level 2
             {
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_shoot"), player.position);
                 type = ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>();//level 2 charge projectile
-                player.statMana -= 15;
+                player.statMana -= item.mana * 3;
                 damage *= 2;
             }
             Charge = 0f;//built-up charge resets to 0f whenever a shot is fired
@@ -234,15 +234,15 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Magic
 
             if (!player.channel && Charge >= 30f)//if the use button is released after charging for at least 30 frames
             {
-                if (player.statMana < 5)
+                if (player.statMana < item.mana)
                 {
                     Charge = 0;
                 }
-                else if (player.statMana >= 5)
+                else if (player.statMana >= item.mana)
                 {
                     player.itemAnimation = player.itemAnimationMax;
                     player.itemRotation = (float)Math.Atan2(((Main.mouseY + Main.screenPosition.Y - player.Center.Y) * player.direction), ((Main.mouseX + Main.screenPosition.X - player.Center.X) * player.direction));
-                    if (Charge >= 180f && player.statMana >= 15)
+                    if (Charge >= 180f && player.statMana >= item.mana * 3)
                     {
                         int a = Projectile.NewProjectile(player.Center.X, player.Center.Y, (AimDirection.X * item.shootSpeed) * .625f, (AimDirection.Y - 11f), ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>(), item.damage, 0, item.owner);
                         Main.projectile[a].aiStyle = 1;
