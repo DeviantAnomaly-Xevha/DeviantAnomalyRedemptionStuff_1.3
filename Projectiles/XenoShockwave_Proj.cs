@@ -23,8 +23,7 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-			Mod DARSMod = ModLoader.GetMod("DeviantAnomalyRedemptionStuff");
-			Projectile.NewProjectile(projectile.Center, projectile.velocity, DARSMod.ProjectileType ("XenoShockwaveSpark_Proj"), projectile.damage, projectile.knockBack, projectile.owner);
+			Projectile.NewProjectile(projectile.Center, projectile.velocity, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType ("XenoShockwaveSpark_Proj"), projectile.damage, projectile.knockBack, projectile.owner);
         }
 
 		public override Color? GetAlpha(Color lightColor) {
