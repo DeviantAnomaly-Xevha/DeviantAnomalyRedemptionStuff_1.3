@@ -1,0 +1,5 @@
+The Xenomite Crystal Bomb weapon's image consists of 15 frames in a 32x480 image.
+
+Michelle and the others must be trying to wield that entire image size... so I made these simpler versions for them.
+
+Also, companions don't try to charge weapons, not even the Charged Blaster Cannon, so these are non-charging and auto-firing.

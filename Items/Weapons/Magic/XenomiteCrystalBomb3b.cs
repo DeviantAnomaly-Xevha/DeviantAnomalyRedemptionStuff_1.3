@@ -18,7 +18,15 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Magic
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Xenomite Crystal Bomb");
-            Tooltip.SetDefault("[i:" + ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteCrystalBombTooltipIcon3b") + "]\nLaunch an unstable shard which rapidly forms crystal pillars upon contact with terrain.\nCharged shots deal double damage.\nPillars deal half damage, but can reflect enemy projectiles.\nHolding this weapon may infect you...");
+            Mod RedeMod = ModLoader.GetMod("Redemption");
+            if (RedeMod != null)
+            {
+                Tooltip.SetDefault("[i:" + ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteCrystalBombTooltipIcon3b") + "]\nLaunch an unstable shard which rapidly forms crystal pillars upon contact with terrain.\n[c/64ff64:-Can be charged!-]\nPillars can reflect enemy projectiles.\nHolding this weapon may infect you...");
+            }
+            else
+            {
+                Tooltip.SetDefault("[i:" + ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ItemType("XenomiteCrystalBombTooltipIcon3b") + "]\nLaunch an unstable shard which rapidly forms crystal pillars upon contact with terrain.\n[c/64ff64:-Can be charged!-]\nPillars can reflect enemy projectiles.\nHolding this weapon may poison you...");
+            }
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(2, 15));
         }
 
@@ -59,14 +67,14 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Magic
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_shoot"), player.position);
                 type = ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>();//level 1 charge projectile
                 player.statMana -= item.mana * 2;
-                damage *= 2;
+                damage *= 3;
             }
             else if (Charge >= 180f && player.statMana >= item.mana * 3)//charge level 2
             {
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_shoot"), player.position);
                 type = ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>();//level 2 charge projectile
                 player.statMana -= item.mana * 3;
-                damage *= 2;
+                damage *= 3;
             }
             Charge = 0f;//built-up charge resets to 0f whenever a shot is fired
             return true;
@@ -245,7 +253,7 @@ namespace DeviantAnomalyRedemptionStuff.Items.Weapons.Magic
                     player.itemRotation = (float)Math.Atan2(((Main.mouseY + Main.screenPosition.Y - player.Center.Y) * player.direction), ((Main.mouseX + Main.screenPosition.X - player.Center.X) * player.direction));
                     if (Charge >= 180f && player.statMana >= item.mana * 3)
                     {
-                        int a = Projectile.NewProjectile(player.Center.X, player.Center.Y, (AimDirection.X * item.shootSpeed) * .625f, (AimDirection.Y - 11f), ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>(), item.damage, 0, item.owner);
+                        int a = Projectile.NewProjectile(player.Center.X, player.Center.Y, (AimDirection.X * item.shootSpeed) * .625f, (AimDirection.Y - 11f), ModContent.ProjectileType<X1XenomiteCrystalBombCharged_Proj>(), item.damage * 3, 0, item.owner);
                         Main.projectile[a].aiStyle = 1;
                         Main.projectile[a].tileCollide = true;
                     }
