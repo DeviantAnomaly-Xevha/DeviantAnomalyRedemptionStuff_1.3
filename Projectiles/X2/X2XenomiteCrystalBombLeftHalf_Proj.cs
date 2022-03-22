@@ -33,7 +33,7 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles.X2
         {
             Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalPillar_grow"), projectile.position);
 
-            int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X2XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X2XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), projectile.damage, 0, projectile.owner);
             Main.projectile[a].aiStyle = 1;
             Main.projectile[a].tileCollide = true;
 

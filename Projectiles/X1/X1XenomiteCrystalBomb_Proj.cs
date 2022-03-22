@@ -30,22 +30,23 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles.X1
             projectile.ignoreWater = false;
             projectile.tileCollide = true;
             projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 30;
+            projectile.localNPCHitCooldown = projectile.timeLeft;
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            projectile.width = 32;
-            projectile.height = 32;
-            projectile.timeLeft = 1;
-            Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalBomb_explode"), projectile.position);
-            int a = Projectile.NewProjectile(projectile.Center.X - 8f, projectile.Center.Y, 0, 0, ModContent.ProjectileType<X1XenomiteCrystalBombExplosion_Proj>(), 0, 0, projectile.owner);
-
-            Projectile.NewProjectile(Main.projectile[a].Center.X - 2, Main.projectile[a].Center.Y - 9, -1f, 1f, ModContent.ProjectileType<X1XenomiteCrystalBombLeftHalf_Proj>(), projectile.damage, 0, projectile.owner);
-
-            Projectile.NewProjectile(Main.projectile[a].Center.X + 2, Main.projectile[a].Center.Y - 9, 1f, 1f, ModContent.ProjectileType<X1XenomiteCrystalBombRightHalf_Proj>(), projectile.damage, 0, projectile.owner);
-
             Mod RedeMod = ModLoader.GetMod("Redemption");
+            if (target.defDefense >= projectile.damage * .75  || target.takenDamageMultiplier <= .25)
+            {
+                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalPillar_shatter"), projectile.position);
+
+                Projectile.NewProjectile(projectile.Center.X - 2, projectile.Center.Y, -1f, -1f, ModContent.ProjectileType<X1XenomiteCrystalBombLeftHalf_Proj>(), projectile.damage / 2, 0, projectile.owner);
+
+                Projectile.NewProjectile(projectile.Center.X + 2, projectile.Center.Y, 1f, -1f, ModContent.ProjectileType<X1XenomiteCrystalBombRightHalf_Proj>(), projectile.damage / 2, 0, projectile.owner);
+
+                projectile.Kill();
+            }
+
             if (RedeMod != null)
             {
                 target.AddBuff(RedeMod.BuffType("XenomiteDebuff"), 203, false);
@@ -60,16 +61,16 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles.X1
         {
             Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalPillar_grow"), projectile.position);
 
-            int a = Projectile.NewProjectile(projectile.Center.X - 8, projectile.Center.Y - 18f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int a = Projectile.NewProjectile(projectile.Center.X - 8, projectile.Center.Y - 18f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj"), projectile.damage / 2, 0, projectile.owner);
             Main.projectile[a].aiStyle = 1;
             Main.projectile[a].tileCollide = true;
 
-            int b = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int b = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), projectile.damage / 2, 0, projectile.owner);
             Main.projectile[b].aiStyle = 1;
             Main.projectile[b].position.X = Main.projectile[a].position.X - 25;
             Main.projectile[b].tileCollide = true;
 
-            int c = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int c = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), projectile.damage / 2, 0, projectile.owner);
             Main.projectile[c].aiStyle = 1;
             Main.projectile[c].position.X = Main.projectile[a].position.X + 25;
             Main.projectile[c].tileCollide = true;

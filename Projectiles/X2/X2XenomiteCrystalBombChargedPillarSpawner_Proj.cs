@@ -30,7 +30,7 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles.X2
 
             if (Main.rand.Next(1, 3) == 1)
             {
-                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 18f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X2XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj"), (projectile.damage / 2), 0, projectile.owner); Main.projectile[a].aiStyle = 1;
+                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 18f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X2XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj"), projectile.damage, 0, projectile.owner); Main.projectile[a].aiStyle = 1;
                 Main.projectile[a].friendly = true;
                 Main.projectile[a].hostile = false;
                 Main.projectile[a].ignoreWater = false;
@@ -38,7 +38,7 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles.X2
             }
             else
             {
-                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X2XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), (projectile.damage / 2), 0, projectile.owner); Main.projectile[a].aiStyle = 1;
+                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X2XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), projectile.damage, 0, projectile.owner); Main.projectile[a].aiStyle = 1;
                 Main.projectile[a].friendly = true;
                 Main.projectile[a].hostile = false;
                 Main.projectile[a].ignoreWater = false;

@@ -33,16 +33,16 @@ namespace DeviantAnomalyRedemptionStuff.Projectiles.X1
         {
             Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/XenomiteCrystalPillar_grow"), projectile.position);
 
-            int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 18f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 18f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj"), projectile.damage, 0, projectile.owner);
             Main.projectile[a].aiStyle = 1;
             Main.projectile[a].tileCollide = true;
 
-            int b = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int b = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), projectile.damage, 0, projectile.owner);
             Main.projectile[b].aiStyle = 1;
             Main.projectile[b].position.X = Main.projectile[a].position.X - 25;
             Main.projectile[b].tileCollide = true;
 
-            int c = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), (projectile.damage) / 2, 0, projectile.owner);
+            int c = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 9f, 0, 12f, ModLoader.GetMod("DeviantAnomalyRedemptionStuff").ProjectileType($"X1XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj"), projectile.damage, 0, projectile.owner);
             Main.projectile[c].aiStyle = 1;
             Main.projectile[c].position.X = Main.projectile[a].position.X + 25;
             Main.projectile[c].tileCollide = true;
